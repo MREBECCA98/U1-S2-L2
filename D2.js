@@ -3,32 +3,49 @@
 */
 
 //assegniamo i valori alle variabili da confrontare con numeri interi
-const num1 = 20;
-const num2 = 10;
+const num1 = 10;
+const num2 = 20;
 //Chiediamo se numero 1 è maggiore di numero 2
 
 if (num1 > num2) {
   // Lo immettiamo all'interno della console per poter vedere il risultato
   console.log("Qual'è il numero più grande?" + num1);
+} else if (num1 < num2) {
+  console.log("Qual'è il numero più grande?" + num2);
 }
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const num3 = 3;
+const num4 = 5;
+//controlliamo se un numero intero è diverso da 5
+if (num1 !== num4) {
+  console.log("not equal");
+}
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const num5 = 50;
+//controlliamo se il numero inserito è divisibile per 5
+//nel caso in cui lo fosse dovrà apparire "usa l'operatore modulo"
+if (num5 % 5 === 0) {
+  console.log("usa l'operatore modulo");
+}
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const num6 = 16;
+const num7 = 8;
+//verifichiamo se il valore di uno dei due numeri sia 8
+if (num6 === 8 || num7 === 8 || num6 + num7 === 8 || num6 - num7 === 8 || num7 - num6 === 8) {
+  console.log("è presente il numero 8");
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -36,14 +53,30 @@ if (num1 > num2) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const totalShoppingCart = 60; //saldo all'interno del carrello utente
+let shippingCost = 10; //costo della spedizione
+//se il carrello supero 50 euro la spedizione è gratuita
+if (totalShoppingCart > 50) {
+  console.log("La spedizione è gratuita");
+  shippingCost = 0;
+}
+// visto che la il carrello cliente supera i 50 euro la spedizione è gratuita, di conseguenza modifichiamo il costo della spedizione a 0 euro
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+const totalShoppingCart2 = 60; //saldo all'interno del carrello utente
+let shippingCost2 = 10; //costo della spedizione
+// se il carrello supera i 50 euro la spedizione è gratuita
+if (totalShoppingCart2 > 50) {
+  console.log("La spedizione è gratuita");
+  shippingCost2 = 0;
+}
+//calcoliamo il totale del carrello applicando lo sconto del 20%
+const totaleSconto = totalShoppingCart2 - (60 * 20) / 100;
+// Sconto del 20%
+console.log("totale del carrello con sconto applicato:" + totaleSconto);
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -51,7 +84,11 @@ if (num1 > num2) {
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+//costruismo il mio array con tre numeri
+const number = [10, 5, 20];
+//devo ordinare i numeri in ordine decrescente
+number.sort((a, b) => b - a);
+console.log("numeri in ordine decrescente:" + number);
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
