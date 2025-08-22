@@ -1,7 +1,13 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-
+let numero = 5;
+let numero2 = 10;
+if (numero >= numero2) {
+  console.log("qual'è maggiore?", numero);
+} else if (numero <= numero2) {
+  console.log("qual'è maggiore?", numero2);
+}
 //assegniamo i valori alle variabili da confrontare con numeri interi
 const num1 = 10;
 const num2 = 20;
@@ -84,23 +90,28 @@ console.log("totale del carrello con sconto applicato:" + totaleSconto);
   Alla fine mostra il risultato in console.
 */
 
-//costruismo il mio array con tre numeri
+//costruisco il mio array con tre numeri
 const number = [10, 5, 20];
-//devo ordinare i numeri in ordine decrescente
+//devo ordinare i numeri in ordine decrescente (variabile assegnata.sort)
 number.sort((a, b) => b - a);
 console.log("numeri in ordine decrescente:" + number);
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+let valoreFornito = 0;
+console.log("qual'è il valore fornito?", typeof valoreFornito);
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let numeroModulo = 27; //l'operatore modulo=%
+if (numeroModulo % 2 === 0) {
+  console.log("il numero è pari");
+} else console.log("il numero è dispari");
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -115,39 +126,58 @@ console.log("numeri in ordine decrescente:" + number);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let val = 7;
+if (val < 5) {
+  console.log("il valore è maggiore di 5");
+} else if (val < 10) {
+  console.log("il valore è minore di 10");
+} else {
+  console.log("uguale a 10 o maggiore");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
-const me = {
+/* SCRIVI QUI LA TUA RISPOSTA */
+let me = {
   name: "John",
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+Object.assign(me, { city: "Toronto" }); //aggiungere una proprietà ad un oggetto già esistente-->Object.assign(variabile già esistente -->aggiungo {valore.chiave})
+console.log("aggiungo city", me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+console.log("elimino lastName", me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let newMe = me.skills.slice(0, -1);
+console.log("elimino l'ultima proprietà di skills", newMe);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let arrayVuoto = [];
+arrayVuoto.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log("array con numeri", arrayVuoto);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+arrayVuoto.pop(); //elimino l'ultimo elemento
+arrayVuoto.push(100); //aggiungo 100 come nuovo elemento finale
+console.log("sostituisco il num 10 con il num 100", arrayVuoto);
